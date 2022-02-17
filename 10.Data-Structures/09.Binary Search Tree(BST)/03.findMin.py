@@ -1,10 +1,20 @@
-def findMin(self):
+# def findMin(self):
+#     if self.root is None:
+#         return "Not found!"
+#     else:
+#         cur = self.root
+#         prev = cur
+#         while cur:
+#             prev = cur
+#             cur = cur.left
+#         return prev.val
+
+
+def getMin(self):
     if self.root is None:
-        return "Not found!"
+        return "Not Found!"
     else:
         cur = self.root
-        prev = cur
-        while cur:
-            prev = cur
+        while cur.left:
             cur = cur.left
-        return prev.val
+        return cur.val
