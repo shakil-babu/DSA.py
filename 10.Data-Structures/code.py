@@ -10,7 +10,7 @@ class MinHeap:
         idx = len(self.values) - 1
         element = self.values[idx]
         while idx > 0:
-            parentIdx = idx + 1 // 2
+            parentIdx = idx - 1 // 2
             parentElement = self.values[parentIdx]
             if parentElement < element:
                 break
