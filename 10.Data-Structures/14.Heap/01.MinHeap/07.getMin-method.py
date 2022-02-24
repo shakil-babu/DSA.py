@@ -4,3 +4,6 @@ def _getMin(self):
 
     else:
         return self.values[0]
+
+
+
