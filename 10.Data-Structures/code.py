@@ -55,3 +55,7 @@ class MinHeap:
     # size method
     def _size(self):
         return len(self.values)
+
+    # isEmpty method
+    def _isEmpty(self):
+        return len(self.values) == 0
