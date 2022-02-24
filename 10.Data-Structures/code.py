@@ -2,7 +2,7 @@ class MinHeap:
     def __init__(self):
         self.values = []
 
-    # insert method 
+    # insert method
     def _insert(self, val):
         self.values.append(val)
         self._bubbleUp()
@@ -46,8 +46,12 @@ class MinHeap:
             self._minHeapify(smallest)
 
     # exactmin method
-    def _exactMin(self) :
+    def _exactMin(self):
         minNumber = self.values[0]
         self.values[0] = self.values.pop()
         self._minHeapify()
         return minNumber
+
+    # size method
+    def _size(self):
+        return len(self.values)
