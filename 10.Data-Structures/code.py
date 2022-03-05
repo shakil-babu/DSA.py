@@ -28,8 +28,7 @@ rev = a[::-1]
 
 
 
-# # # 09 -> take multiple input
-# # result = map(lambda x: int(x), raw_input().split())
+
 
 # # from collections import Counter
 
