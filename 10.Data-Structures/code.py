@@ -1,10 +1,11 @@
 # # # 10 neat python tricks
 
 
-# # # 01. reverse string in python
-# # import itertools
-# # a = 'shakil'
-# # rev = a[::-1]
+# 01. reverse string in python
+import itertools
+
+a = 'shakil'
+rev = a[::-1]
 
 
 # # # 02. transposing a matrix
@@ -126,20 +127,16 @@
 # """
 
 
-from collections import Counter
+t = int(input())
+for i in range(t):
+    a, b = input().split()
 
+    a = int(a)
+    b = int(b)
 
-def countingSort(arr):
-    c = Counter(arr)
-    minv = min(c.keys())
-    maxv = max(c.keys())
+    if b == 1 and b >= a:
+        print(0)
 
-    sortedList = []
-    for i in range(minv, maxv):
-        sortedList.extend([i] * c[i])
-    return sortedList
+    elif a < b :
+        
 
-
-# initialization
-sorting = countingSort([3, 4, 6, 2, -1, -1, -2, -3, 4, 4, ])
-print(sorting)
