@@ -8,15 +8,10 @@ a = 'shakil'
 rev = a[::-1]
 
 
-# # # 02. transposing a matrix
-# # mat = [[1, 2, 3], [4, 5, 6]]
-# # trans = zip(*mat)
-# # # [(1, 4), (2, 5), (3, 6)]
 
 
-# # # 03. store all three values
-# # li = [10, 20, 40]
-# # a, b, c = li
+
+
 
 
 # # # 04. create a single string
