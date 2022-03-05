@@ -17,27 +17,8 @@ rev = a[::-1]
 
 
 
-# # """ -> 05.
-# # List 1 = ['a', 'b', 'c', 'd']
-# # List 2 = ['p', 'q', 'r', 's']
-# # Write a Python code to print
-
-# #     ap
-# #     bq
-# #     cr
-# #     ds
-
-# # """
-# # li1 = ['a', 'b', 'c', 'd']
-# # li2 = ['p', 'q', 'r', 's']
-# # for x, y in zip(li1, li2):
-# #     print(x, y)
 
 
-# # # 06. swap two numbers with one line
-# # a = 10
-# # b = 30
-# # a, b = b, a
 
 
 # # # 07. multiply
