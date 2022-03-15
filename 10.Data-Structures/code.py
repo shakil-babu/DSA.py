@@ -1,107 +1,66 @@
-# # # 10 neat python tricks
+class HashTable :
+    def __init__(self) :
+        self.Max = 100
+        self.arr = [[] for i in range(self.Max)]
+    
+    # hashfunction
+    def __hashing__(self, key) :
+        h = 0
+        for char in key :
+            h += ord(char)
+
+        return h % self.Max
 
 
-# 01. reverse string in python
-import itertools
+    # setItem method
+    def __setItem__(self,key, val) :
+        hash = self.__hashing__(key)
+        found = False
+        for idx,element in enumerate(self.arr[hash]):
+            if len(element) == 2 and element[0] == key :
+                self.arr[hash].append((key,val))
+                found = True
+                break
 
-a = 'shakil'
-rev = a[::-1]
+        if not found:
+            self.arr[hash].append((key,val))
+            
+    # get item
+    def __getItem__(self, key) :
+        hash = self.__hashing__(key)
 
+        for item in self.arr[hash]:
+            if item[0] == key :
+                return item[1]
 
+    # delete item
+    def __deleteItem__(self, key) :
+        hash = self.__hashing__(key)
+        for idx,element in enumerate(self.arr[hash]):
+            if element[0] == key :
+                del self.arr[hash][idx]             
 
+    # print
+    def Output(self) :
+        print(self.arr)
 
-
-
-
-
-
-
-
-
-
-
-
-# # # 07. multiply
-# # print("str" * 4)
-
-
-
-
-
-
-
-# # from collections import Counter
-
-
-# # def findOriginalArray(changed):
-# #     if changed is None or len(changed) == 1:
-# #         return []
-# #     counter = Counter(changed)
-# #     ans = []
-
-# #     for key in sorted(counter.keys()):
-# #         print(key)
-# #         while counter[key] > 0:
-# #             counter[key] -= 1
-# #             counter[key * 2] -= 1
-
-# #             ans.append(key)
+# instance
+hashtable = HashTable()
 
 
-# #         if counter[key * 2] < 0 :
-# #             return []
+# insert data
+hashtable.__setItem__("abc", 1001)
+hashtable.__setItem__("bac", 1111)
 
-# #     return ans
-
-
-# from collections import Counter
-
-
-# def prefixCount(s, t):
-#     # sCounter = collections.Counter(s)
-#     # tCounter = collections.Counter(t)
-
-#     # for k in tCounter.keys():
-#     #     if k in sCounter:
-#     #         tCounter[k] -= sCounter[k]
-#     #         sCounter[k] = 0
-#     # count = 0
-#     # for k, v in tCounter.items():
-#     #     if v > 0:
-#     #         count += v
-#     # return count
-
-#     scounter = Counter(s)
-#     tcounter = Counter(t)
-#     ldef = scounter - tcounter
-#     rdef = tcounter - scounter
-
-#     lsum = sum(ldef.values())
-#     rsum = sum(rdef.values())
-
-#     return ldef+rsum
+hashtable.__setItem__("baby", 10020)
+hashtable.__setItem__("bayb", 100)
+hashtable.__setItem__("fahim", 39002)
 
 
-# # initialize
-# ans = prefixCount('leetcode', 'coats')
-# print(ans)
+# get item
+a = hashtable.__getItem__('fahim')
+# print(a)
+# hashtable.Output()
 
-
-# """
-
-# """
-
-
-t = int(input())
-for i in range(t):
-    a, b = input().split()
-
-    a = int(a)
-    b = int(b)
-
-    if b == 1 and b >= a:
-        print(0)
-
-    elif a < b :
-        
-
+hashtable.__deleteItem__('baby');
+hashtable.Output()
